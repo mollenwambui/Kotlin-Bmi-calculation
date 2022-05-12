@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Helloworld">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".sendmoney"
+            android:exported="false" />
+        <activity
             android:name=".bmiCalculatorActivity"
             android:exported="false" />
         <activity

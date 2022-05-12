@@ -2,56 +2,60 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imgheight"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".bmiCalculatorActivity">
 
     <ImageView
         android:id="@+id/imgweight"
-        android:layout_width="19dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etweight"
+        android:layout_width="22dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etWeight"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etweight"
+        app:layout_constraintTop_toTopOf="@+id/etWeight"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_fitness_center_24" />
 
     <EditText
-        android:id="@+id/etweight"
+        android:id="@+id/etWeight"
         android:layout_width="289dp"
         android:layout_height="55dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Enter weight in Kgs"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toEndOf="@+id/imgweight"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgheight"
+        android:id="@+id/imgHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
-        app:layout_constraintTop_toTopOf="@+id/editTextNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/etHeight"
+        app:layout_constraintTop_toTopOf="@+id/etHeight"
         app:srcCompat="@drawable/ic_baseline_height_24"
         tools:layout_editor_absoluteX="19dp" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/etHeight"
         android:layout_width="286dp"
         android:layout_height="53dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Enter height in cm"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imgheight"
-        app:layout_constraintTop_toBottomOf="@+id/etweight" />
+        app:layout_constraintStart_toEndOf="@+id/imgHeight"
+        app:layout_constraintTop_toBottomOf="@+id/etWeight" />
 
     <Button
         android:id="@+id/btnCalculate"
@@ -61,26 +65,17 @@
         android:layout_marginEnd="148dp"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/etHeight" />
 
     <TextView
-        android:id="@+id/tvbmi"
-        android:layout_width="62dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
-
-    <TextView
-        android:id="@+id/tvResults"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
+        android:id="@+id/tvBmi"
+        android:layout_width="116dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#2196F3"
         android:text="Result"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvbmi" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
